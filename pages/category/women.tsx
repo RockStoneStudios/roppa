@@ -4,9 +4,10 @@ import { Typography } from '@mui/material'
 import { useProducts } from '../../hooks';
 import { FullScreenLoading } from '../../components/ui';
 import { ProductList } from '../../components/products';
+import { IProduct } from '../../interfaces';
 
 const WomenPage = () => {
-    const {products,isLoading} = useProducts('/products?gender=women');
+    const {products,isLoading} = useProducts<IProduct[]>('/products?gender=women');
   return (
      <ShopLayout title={'Teslo-Shop - Women'} pageDescription={'Producto para Ellas'}>
         <Typography variant='h1'>Women</Typography>
