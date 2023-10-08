@@ -66,8 +66,13 @@ const HistoryPage:NextPage<Props> = ({orders}) => {
                     rows={ rows }
                     columns={ columns }
                     
-                    pageSize={ 10 }
-                    rowsPerPageOptions={ [10] }
+                    initialState={{
+                        pagination: { 
+                          paginationModel: { pageSize: 5 } 
+                        },
+                      }}
+                      pageSizeOptions={[5, 10, 25]}
+                    
                 />
 
             </Grid>

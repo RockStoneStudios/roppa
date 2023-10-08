@@ -6,11 +6,12 @@ import { initialData } from '../database/seed-data';
 import { ProductList } from '../components/products';
 import { useProducts } from '../hooks';
 import { FullScreenLoading } from '../components/ui';
+import { IProduct } from '../interfaces';
 
 
 
 const Home: NextPage = () => {
-  const {products,isLoading,} =  useProducts('/products');
+  const {products,isLoading,} =  useProducts<IProduct[]>('/products');
 
   return (
     <ShopLayout title={'Teslo-Shop - Home'} pageDescription={'Encuentra los mejores productos de Teslo aquí'}>

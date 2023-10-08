@@ -1,10 +1,11 @@
 import { isValidObjectId } from "mongoose";
+import { connect } from "./db";
 import { IOrder } from "../interfaces";
-import { connect } from './db';
 import { Order } from "../models";
 import { db } from ".";
 
-export  const getOrderById = async (id :string):Promise<IOrder| null> => {
+
+export  const getOrderById = async (id :string):Promise<any> => {
     if(!isValidObjectId(id)) return null;
 
 
@@ -20,7 +21,7 @@ export  const getOrderById = async (id :string):Promise<IOrder| null> => {
 }
 
 
-export const getOrdersByUser = async (userId : any) :Promise<IOrder[] > => {
+export const getOrdersByUser = async (userId : any) :Promise<any> => {
     if(!isValidObjectId(userId)) return [];
 
     await db.connect();
