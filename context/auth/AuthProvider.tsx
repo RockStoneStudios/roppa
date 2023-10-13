@@ -4,7 +4,7 @@ import { AuthContext } from  '.';
 import {useSession,signOut} from 'next-auth/react'
 import { IUser } from '../../interfaces';
 import { authReducer } from '.';
-import { tesloApi } from '../../api';
+import { tesloApi } from '../../config';
 import Cookies from 'js-cookie';
 import axios, { AxiosError } from 'axios';
 import { useRouter } from 'next/router';

@@ -13,7 +13,7 @@ import { getServerSession } from 'next-auth/next';
 import  authOptions  from '../api/auth/[...nextauth]';
 import { User } from '../../models';
 import {PayPalButtons, BraintreePayPalButtons} from '@paypal/react-paypal-js';
-import { tesloApi } from '../../api';
+import { tesloApi } from '../../config';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 

@@ -9,7 +9,7 @@ import { ShopLayout } from '../../../components/layouts/ShopLayout';
 import { CartList, OrderSummary } from '../../../components/cart';
 import { IOrder } from '../../../interfaces';
 import { getServerSession } from 'next-auth/next';
-import { tesloApi } from '../../../api';
+import { tesloApi } from '../../../config';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { AdminLayout } from '../../../components/layouts';
